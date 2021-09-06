@@ -1,0 +1,43 @@
+﻿<Window x:Class="MotorbikeStockApp.EditMotorcycleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MotorbikeStockApp"
+        mc:Ignorable="d"
+        Title="Edit Motorcycle" Height="350" Width="600" Background="WhiteSmoke">
+    <Grid>
+        <Label Content="Edit Motorcycle Data" HorizontalAlignment="Center" FontWeight="SemiBold"/>
+        <Label Content="Vehicle Registration" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10, 30,0,0" FontWeight="Light"/>
+        <TextBlock x:Name="vehicleReg" Width="150" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,55,0,0" Background="White"/>
+        <Label Content="Manufacturer" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,80,0,0" FontWeight="Light"/>
+        <TextBox Name="vehicleManufacturer" Width="150" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,105,0,0" Background="White"/>
+        <Label Content="Model" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10, 130,0,0" FontWeight="Light"/>
+        <TextBox x:Name="vehicleModel" Width="150" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,155,0,0" Background="White"/>
+        <Label Content="Millage" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10, 180,0,0" FontWeight="Light"/>
+        <TextBox x:Name="vehicleMillage" Width="150" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,205,0,0" Background="White" PreviewTextInput="PreviewTextInput"/>
+        <Label Content="Date Purchased" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10, 230,0,0" FontWeight="Light"/>
+        <DatePicker x:Name="vehiclePurchaseDate" Width="150" Height="26" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,255,0,0" Background="White"/>
+
+        <Label Content="Previous Owner Details" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="330,30,0,0"/>
+        <Label Content="First Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="330,55,0,0" FontWeight="Light"/>
+        <TextBox x:Name="firstName" Width="100" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="335,80,0,0" Background="White"/>
+        <Label Content="Surname" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="440,55,0,0" FontWeight="Light"/>
+        <TextBox x:Name="surname" Width="135" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="445,80,0,0" Background="White"/>
+
+        <Label Content="Address" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="330,105,0,0" FontWeight="Light"/>
+        <TextBox x:Name="address1" Width="245" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="335,130,0,0" Background="White"/>
+        <TextBox x:Name="address2" Width="245" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="335,155,0,0" Background="White"/>
+        <TextBox x:Name="address3" Width="245" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="335,180,0,0" Background="White"/>
+        <TextBox x:Name="address4" Width="245" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="335,205,0,0" Background="White"/>
+        <Label Content="Postcode" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="330,230,0,0" FontWeight="Light"/>
+        <TextBox x:Name="postcode" Width="190" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="390,230,0,0" Background="White"/>
+        <Label Content="Telephone No:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="330,255,0,0" FontWeight="Light"/>
+        <TextBox x:Name="telephoneNo" Width="162" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="418,255,0,0" Background="White"/>
+
+
+        <Button Content="Cancel" Height="20" Width="100" Click="btnCancel" Margin="245,280,0,0"/>
+        <Button Content="Confirm" Height="20" Width="100" Click="btnConfirm" Margin="465,280,0,0"/>
+
+    </Grid>
+</Window>

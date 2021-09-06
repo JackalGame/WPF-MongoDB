@@ -1,0 +1,29 @@
+﻿<Window x:Class="MotorbikeStockApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MotorbikeStockApp"
+        mc:Ignorable="d"
+        Title="Motorcycle Stock" Height="450" Width="800" Background="SteelBlue">
+    <Grid>
+        <Label Content="Motorcycle manufacturer:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="SemiBold"/>
+        <ComboBox Name="listManufacturers" HorizontalAlignment="Left" Margin="170, 15, 0, 0" Width="200" Height="20" VerticalAlignment="Top" DropDownClosed="listManufacturers_DownDownClosed"/>
+        <Button Content="Add New Motorcycle" HorizontalAlignment="Left" Margin="600, 15, 0, 0 " Width="150" Height="20" VerticalAlignment="Top" Click="btnNewAddMotorcycle"/>
+        <Button Content="See Previous Owner" HorizontalAlignment="Left" Margin="10, 365, 0, 0" Width="150" Height="20" VerticalAlignment="Top" Click="btnSeePreviousOwner"/>
+        <Button Content="Edit Selected Item" HorizontalAlignment="Left" Margin="170, 365, 0, 0" Width="150" Height="20" VerticalAlignment="Top" Click="btnEditSelectedItem"/>
+        <Button Content="Remove Selected Item" HorizontalAlignment="Left" Margin="600, 365, 0, 0" Width="150" Height="20" VerticalAlignment="Top" Click="btnRemoveSelectedItem"/>
+        <ListView Name="listMotorcycles" HorizontalAlignment="Left" Margin="10, 50, 0, 0" Width="740" Height="300" VerticalAlignment="Top" Background="Azure">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Registration" Width="90"  DisplayMemberBinding="{Binding VehicleRegistration}" />
+                    <GridViewColumn Header="Manufacturer" Width="120" DisplayMemberBinding="{Binding Manufacturer}" />
+                    <GridViewColumn Header="Model" Width="120" DisplayMemberBinding="{Binding Model}" />
+                    <GridViewColumn Header="Millage" Width="90" DisplayMemberBinding="{Binding Millage}" />
+                    <GridViewColumn Header="Date Obtained" Width="100" DisplayMemberBinding="{Binding DatePurchased, StringFormat={}{0:dd MMM yyyy}}" />
+                    <GridViewColumn Header="Previous Owner" Width="215" DisplayMemberBinding="{Binding PreviousOwner.FullName}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>
